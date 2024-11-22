@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Ignore the portfile, usage, and vcpkg.json
+portfile.cmake
+usage
+vcpkg.json

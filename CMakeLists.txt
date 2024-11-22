@@ -5,12 +5,16 @@ project(divy-c)
 # Add your include and source files
 include_directories(include)
 
-# Specify the library source files
-add_library(divy-c STATIC
-    src/vector.c
-    src/queue.c
-    src/common.c
+
+set(SOURCES
+    ${CMAKE_SOURCE_DIR}/src/vector.c
+    ${CMAKE_SOURCE_DIR}/src/queue.c
+    ${CMAKE_SOURCE_DIR}/src/stack.c
 )
+
+
+# Specify the library source files
+add_library(divy-c STATIC ${SOURCES})
 
 # Specify the install rules
 install(TARGETS divy-c DESTINATION lib)
