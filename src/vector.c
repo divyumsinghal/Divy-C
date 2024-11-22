@@ -14,7 +14,7 @@ Vector* vector_create (int capacity)
 
 void vector_push_back (Vector* v, int item)
 {
-	if (v->sp >= v->capacity - 1)
+	if (v->vp >= v->capacity - 1)
 	{
 		v->capacity *= 2;
 		v->data = realloc (v->data, v->capacity * sizeof (int));
